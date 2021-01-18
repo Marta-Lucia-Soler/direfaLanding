@@ -25,15 +25,10 @@
 
       img {
         width: 100%;
-        &:hover {
-          animation-duration: 0.8s;
-          animation-name: rotate;
-          animation-iteration-count: 1;
-          animation-timing-function: ease;
-        }
       }
     }
   }
+
   &__menuItems {
     background-color: transparentize($secondary-color, 0.1);
     font-size: 0.938rem;
