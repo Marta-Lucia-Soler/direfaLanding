@@ -10,10 +10,26 @@
   text-transform: uppercase;
   padding-top: 6.5rem;
 }
+.tituloDos {
+  color: $main-color;
+  font-size: 1.2rem;
+  box-sizing: 290px, 45px;
+  display: flex;
+  justify-content: center;
+  font-family: $secondary-font;
+  margin-top: 1.875rem;
+  margin-bottom: 0.938rem;
+}
+.wrapperTeam {
+  background-color: $virtudes-background;
+  padding-bottom: 50px;
+}
+.wrapper {
+  padding-bottom: 20px;
+}
 
 .team {
   position: relative;
-
   & p {
     margin-right: 0.938rem;
     margin-left: 0.938rem;
@@ -23,7 +39,6 @@
     color: $main-text-color;
     line-height: 1.5rem;
   }
-
   &__div {
     flex-direction: row;
     height: 80px;
@@ -47,20 +62,6 @@
     font-size: 1.125rem;
     margin: 0.875rem 0.9375rem 1rem 0.875rem;
     line-height: 2rem;
-  }
-}
-.wrapperTeam {
-  background-color: $virtudes-background;
-  padding-bottom: 50px;
-  h3 {
-    color: $main-color;
-    font-size: 1.375 rem;
-    box-sizing: 290px, 45px;
-    display: flex;
-    justify-content: center;
-    font-family: $secondary-font;
-    margin-top: 1.875rem;
-    margin-bottom: 0.938rem;
   }
 }
 @include tablet {
