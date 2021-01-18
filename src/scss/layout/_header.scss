@@ -1,0 +1,103 @@
+.header {
+  font-family: $secondary-font;
+  color: $light-color;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+
+  & .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__teamName {
+    background-color: transparentize($main-color, 0.05);
+    font-size: 1rem;
+    height: 3.75rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      width: 200px;
+
+      img {
+        width: 100%;
+        &:hover {
+          animation-duration: 0.8s;
+          animation-name: rotate;
+          animation-iteration-count: 1;
+          animation-timing-function: ease;
+        }
+      }
+    }
+  }
+  &__menuItems {
+    background-color: transparentize($secondary-color, 0.1);
+    font-size: 0.938rem;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    & li {
+      display: inline-block;
+      transition-property: color;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+      & a {
+        &:hover {
+          transition-property: color;
+          transition-duration: 0.15s;
+          transition-timing-function: ease;
+          color: $main-text-color;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    background-color: transparentize($main-color, 0.05);
+
+    & .wrapper {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__teamName {
+      justify-content: flex-start;
+      margin-left: 2.813rem;
+      background-color: transparent;
+    }
+    &__menuItems {
+      background-color: transparent;
+      height: auto;
+      max-width: 40%;
+      justify-content: space-between;
+      margin-right: 2.813rem;
+    }
+  }
+}
+
+@include desktop {
+  .header__teamName {
+    margin: 0;
+  }
+  .header__menuItems {
+    margin-right: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

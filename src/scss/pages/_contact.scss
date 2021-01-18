@@ -1,0 +1,153 @@
+/* HERO */
+
+.contactHero {
+  height: 18.75rem !important;
+
+  @include desktop {
+    .contactHero {
+      height: 25rem;
+    }
+  }
+}
+
+/* SECTION: CONTACT */
+.contact {
+  font-family: $primary-font;
+  color: $main-text-color;
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    & h1 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-family: $secondary-font;
+      text-transform: uppercase;
+      color: $main-color;
+    }
+    &__description {
+      line-height: 1.5rem;
+    }
+    &__hint {
+      & span:first-child::after {
+        content: "*";
+        color: $secondary-color;
+      }
+    }
+  }
+  &__form {
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 60px;
+    justify-content: flex-start;
+
+    & label:after {
+      content: " *";
+      color: $secondary-color;
+      font-size: 0.75rem;
+    }
+    &__tlfbox label:after {
+      content: none;
+    }
+    & input {
+      height: 45px;
+      border: solid 1px $secondary-text-color;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      padding-left: 7px;
+    }
+    & div {
+      display: flex;
+      flex-direction: column;
+    }
+    &__message {
+      height: 105px !important;
+      margin-top: 5px;
+      margin-bottom: 30px;
+      resize: none;
+      padding-top: 5px;
+      padding-left: 7px;
+      border: solid 1px $secondary-text-color;
+    }
+
+    &__button {
+      border: none !important;
+      background-color: $main-color;
+      border-radius: 4px;
+      color: $light-color !important;
+      text-transform: uppercase;
+
+      &:hover {
+        animation: bounce 0.8s;
+        animation-iteration-count: 3;
+        animation-timing-function: ease;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(-10%) translateX(0%);
+        }
+        30% {
+          transform: translateY(-20%) translateX(0%);
+        }
+
+        50% {
+          transform: translateY(-25%) translateX(0%);
+        }
+
+        75% {
+          transform: translateY(-20%) translateX(0%);
+        }
+        100% {
+          transform: translateY(-10%) translateX(0%);
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .contact {
+    max-width: 442px;
+    &__form__button {
+      width: 206px;
+      align-self: flex-end;
+    }
+  }
+}
+@include desktop {
+  .contactHero {
+    height: 400px !important;
+  }
+  .contact {
+    max-width: 601px;
+    margin-bottom: 120px;
+    &__form {
+      & div {
+        flex-direction: row;
+        justify-content: space-between;
+        & div {
+          display: flex;
+          flex-direction: column;
+        }
+        & .contact__form__messagebox input {
+          width: 395px;
+        }
+        & .contact__form__tlfbox input {
+          width: 162px;
+        }
+      }
+      &__button {
+        width: 206px;
+        align-self: flex-end;
+      }
+    }
+  }
+}
