@@ -6,7 +6,6 @@
   color: $secondary-color;
   margin-bottom: 0.938rem;
   display: flex;
-  justify-content: center;
   text-transform: uppercase;
   padding-top: 6.5rem;
 }
@@ -33,7 +32,7 @@
   & p {
     margin-right: 0.938rem;
     margin-left: 0.938rem;
-    text-align: center;
+    text-align-last: left;
     font-size: 1rem;
     font-family: $primary-font;
     color: $main-text-color;
